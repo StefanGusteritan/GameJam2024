@@ -14,10 +14,12 @@ public class EnemyMovementScript : MonoBehaviour
     float angle, knockbackTimer = 0;
     [SerializeField] float speed, rotationSpeed, knockbackPower, knockbackTime;
     [SerializeField] bool knockbacked = false;
+    [SerializeField] HealthScript health;
     // Start is called before the first frame update
     void Start()
     {
         targetPosition = transform.position;
+        playerBody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -66,7 +68,9 @@ public class EnemyMovementScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if (other.gameObject.layer == 3)
+        {
             knockbacked = true;
-               
+            health.takeDamage(25);
+        } 
     }
 }

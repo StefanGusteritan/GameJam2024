@@ -28,6 +28,7 @@ public class ScalingScript : MonoBehaviour
                 timer = 0;
                 transform.localScale = normalScale;
                 isScaled = false;
+                Debug.Log("Player scale set to 1");
             }
         }
         else
@@ -40,6 +41,7 @@ public class ScalingScript : MonoBehaviour
                 int scale = Random.Range(0,4);
                 transform.localScale = scales[scale]*normalScale;
                 isScaled = true;
+                Debug.Log("Player scale set to " + scales[scale]);
             }
         }
     }
