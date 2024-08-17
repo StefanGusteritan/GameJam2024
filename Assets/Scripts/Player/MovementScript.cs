@@ -9,12 +9,13 @@ public class MovementScript : MonoBehaviour
     [SerializeField] Rigidbody2D body;
     [SerializeField] ContactFilter2D movementFilter;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-    [SerializeField] Vector2 inputDirection;
-    public Vector2 movement;
+    [SerializeField] Vector2 inputDirection, movement;
+
 
     // Update is called once per frame
     void Update()
     {
+        //Gets the movement input
         inputDirection.x = Input.GetAxisRaw("Horizontal");
         inputDirection.y = Input.GetAxisRaw("Vertical");
         inputDirection.Normalize();
@@ -22,10 +23,12 @@ public class MovementScript : MonoBehaviour
 
     private void FixedUpdate() 
     {
+        //Moves the player
         RestrictMovement();
         body.MovePosition(body.position + movement);
     }
 
+    //Creates the movement vector by verifing there are no collisions using raycasting
     private void RestrictMovement()
     {
         int count;
