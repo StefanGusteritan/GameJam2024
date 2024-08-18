@@ -21,7 +21,7 @@ public class MovementScript : MonoBehaviour
         inputDirection.Normalize();
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
         //Moves the player
         RestrictMovement();

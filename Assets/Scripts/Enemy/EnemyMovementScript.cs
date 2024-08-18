@@ -14,7 +14,7 @@ public class EnemyMovementScript : MonoBehaviour
     float angle, knockbackTimer = 0;
     [SerializeField] float speed, rotationSpeed, knockbackPower, knockbackTime;
     [SerializeField] bool knockbacked = false;
-    [SerializeField] HealthScript health;
+    [SerializeField] EnemyHealthScript health;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,15 +34,15 @@ public class EnemyMovementScript : MonoBehaviour
                 knockbacked = false;
             }
         }
-    }
-    
-    void FixedUpdate()
-    {
+
         //Rotates towrds player
         targetDirection = playerBody.position - body.position;
         angle = VectorLogic.Angle(targetDirection);
         body.SetRotation(angle);
-        
+    }
+    
+    private void FixedUpdate() 
+    {
         //Choses to stay in the same plase or finds another target position
         if(body.position == targetPosition)
         {
@@ -58,9 +58,7 @@ public class EnemyMovementScript : MonoBehaviour
             else
             {
                 knockback = (body.position - playerBody.position).normalized;
-                transform.position = transform.position 
-                    + new UnityEngine.Vector3(knockback.x, knockback.y, transform.position.z) 
-                    * knockbackPower * Time.deltaTime;
+                body.MovePosition(body.position + knockback* knockbackPower * Time.deltaTime);
             }
         }
     }
@@ -68,9 +66,10 @@ public class EnemyMovementScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if (other.gameObject.layer == 3)
-        {
             knockbacked = true;
-            health.takeDamage(25);
-        } 
+
+        else if (other.gameObject.layer == 7)
+            health.takeDamage(other.gameObject.GetComponent<ProjectileScript>().GetDamage());
+
     }
 }
