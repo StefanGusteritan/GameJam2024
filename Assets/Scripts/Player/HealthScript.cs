@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
-    [SerializeField] float health;
+    [SerializeField] float health, maxHealh;
     LevelLogicScript logicScript;
 
     private void Start() {
         logicScript = GameObject.FindGameObjectWithTag("Logic").GetComponent<LevelLogicScript>();
+
+        health = maxHealh;
     }
 
     public void takeDamage(float damage)
@@ -21,7 +23,11 @@ public class HealthScript : MonoBehaviour
 
     public void heal(float hp)
     {
-        health += hp;
+        if (health + hp <= maxHealh)
+            health += hp;
+        else
+            health = maxHealh;
+
         Debug.Log(gameObject.name + " heal (+" + hp + " hp)");
     }
 
@@ -31,6 +37,16 @@ public class HealthScript : MonoBehaviour
         GameObject.Destroy(gameObject);
         Debug.Log(gameObject.name + " deleted");
         logicScript.GameOver();
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealh;
+    }
+
+    public float GetHealth()
+    {
+        return health;
     }
 
     private void OnCollisionEnter2D(Collision2D other) 

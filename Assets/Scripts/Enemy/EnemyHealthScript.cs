@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealthScript : MonoBehaviour
 {
-    [SerializeField] float health;
+    [SerializeField] float health, maxHealh;
+
+    private void Start() {
+        health = maxHealh;
+    }
 
     public void takeDamage(float damage)
     {
