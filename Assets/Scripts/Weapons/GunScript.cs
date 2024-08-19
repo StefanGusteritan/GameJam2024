@@ -14,16 +14,24 @@ public class GunScript : MonoBehaviour
     float angle, radius;
 
     [SerializeField] GameObject projectile;
-    [SerializeField] int maxAmo, amo;
+    [SerializeField] int maxAmo;
+    public int amo;
     [SerializeField] float reloadTime, shootTime;
+    public float projectilePositionOffset;
     float reloadTimer, shootTimer;
-    bool reload, shoot;
+    public bool reload, shoot;
+
+    public Sprite hudSprite;
 
     private void Start() 
     {
         level = GameObject.FindGameObjectWithTag("Logic").GetComponent<LevelLogicScript>();
 
-        radius = transform.localPosition.x;
+        radius = transform.localPosition.y;
+
+        amo = maxAmo;
+
+        SetSprite();
     }
 
     // Update is called once per frame
@@ -62,7 +70,7 @@ public class GunScript : MonoBehaviour
                 }
             }
 
-            if (Input.GetMouseButtonDown(0) && !shoot && !reload)
+            if (Input.GetMouseButton(0) && !shoot && !reload)
                 Shoot(projectile);
 
             if (Input.GetKeyDown(KeyCode.R) && !reload)
@@ -70,16 +78,26 @@ public class GunScript : MonoBehaviour
         }
     }
 
-    void Shoot(GameObject projectile)
+    public virtual void Shoot(GameObject projectile)
     {
         if (amo > 0)
         {
             amo--;
-            Instantiate(projectile, transform.position, transform.rotation);
+            Instantiate(projectile, transform.position+transform.up*projectilePositionOffset, transform.rotation);
             shoot = true;
             Debug.Log("Instatiated " + projectile.name + "(" + gameObject.name + " shoot)");
         }
         else if (!reload)
             reload = true;
+    }
+
+    public int GetAmo()
+    {
+        return reload? -1 : amo;
+    }
+
+    public virtual void SetSprite()
+    {
+        hudSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 }

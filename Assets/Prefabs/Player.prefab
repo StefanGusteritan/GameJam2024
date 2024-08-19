@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3810234293463324787}
   - component: {fileID: 2835248359674352807}
   - component: {fileID: 544458064919724725}
+  - component: {fileID: 8565895201935085477}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -34,8 +35,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5440263444769048343}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7816922086531592768
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4971108020127468106
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -227,65 +227,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealh: 100
---- !u!1001 &6727172042691672882
-PrefabInstance:
+--- !u!114 &8565895201935085477
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2387536476842100921}
-    m_Modifications:
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728325065963319554, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f096b670bee169e4ca342cca9909846b, type: 3}
---- !u!4 &5440263444769048343 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
-  m_PrefabInstance: {fileID: 6727172042691672882}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407275140817868858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eaee52bafc607499e1169c302b3dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultWeapon: {fileID: 435106520497296596, guid: 455401c14c092e34e957179c6b48e949, type: 3}
+  weapon: {fileID: 0}

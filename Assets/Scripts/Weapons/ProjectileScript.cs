@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
 {
-    [SerializeField] float range, speed, damage;
+    public float range, speed, damage;
     Vector3 startPosition;
 
-    private void Start() {
+    public virtual void Start() {
         startPosition = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if ((transform.position - startPosition).magnitude >= range)
             Destroy();
@@ -26,7 +26,7 @@ public class ProjectileScript : MonoBehaviour
         Destroy();
     }
 
-    void Destroy()
+    public virtual void Destroy()
     {
         GameObject.Destroy(gameObject);
         Debug.Log(gameObject.name + " Destroyed");
