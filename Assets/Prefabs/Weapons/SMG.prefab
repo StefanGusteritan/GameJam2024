@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7562415281220262499, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: shootTime
-      value: 0.15
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7562415281220262499, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: projectile

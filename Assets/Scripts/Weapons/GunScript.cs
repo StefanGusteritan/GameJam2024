@@ -96,6 +96,21 @@ public class GunScript : MonoBehaviour
         return reload? -1 : amo;
     }
 
+    public int GetMaxAmo()
+    {
+        return maxAmo;
+    }
+
+    public float GetReloadTime()
+    {
+        return reloadTime;
+    }
+
+    public GameObject GetProjectile()
+    {
+        return projectile;
+    }
+
     public virtual void SetSprite()
     {
         hudSprite = gameObject.GetComponent<SpriteRenderer>().sprite;

@@ -16,7 +16,7 @@ public class WeaponManagerScript : MonoBehaviour
     public void changeWeapon(GameObject newWeapon)
     {
         GameObject.Destroy(weapon);
-        weapon = Instantiate(newWeapon, transform, true);
+        weapon = Instantiate(newWeapon, transform, false);
         hud.ChangeWeapon(weapon);
         Debug.Log("Weapon changed to " + newWeapon.name);
     }

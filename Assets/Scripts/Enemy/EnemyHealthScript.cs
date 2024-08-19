@@ -26,7 +26,7 @@ public class EnemyHealthScript : MonoBehaviour
     }
 
     //Deletes the object when it has no more health
-    void Die()
+    public virtual void Die()
     {
         GameObject.Destroy(gameObject);
         Debug.Log(gameObject.name + " deleted");

@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71347b1d3139ed44993931ec92c3c4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  range: 2
   speed: 0
-  damage: 0
+  damage: 75
   projectile: {fileID: 4542495514825473376}
 --- !u!1001 &4370783575401181345
 PrefabInstance:

@@ -54,7 +54,7 @@ public class HealthScript : MonoBehaviour
         if (other.gameObject.layer == 6)
             takeDamage(10);
 
-        else if (other.gameObject.layer == 7)
+        else if (other.gameObject.layer == 8)
             takeDamage(other.gameObject.GetComponent<ProjectileScript>().GetDamage());
     }
 }
