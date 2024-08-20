@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: maxHealh
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 1522871959600441439, guid: 8205946c9cefcfc408974c6d000864e6, type: 3}
+      propertyPath: dropChanse
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4111786498626163550, guid: 8205946c9cefcfc408974c6d000864e6, type: 3}
       propertyPath: speed
       value: 1.5

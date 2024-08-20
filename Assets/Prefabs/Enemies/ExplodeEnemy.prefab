@@ -120,4 +120,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealh: 60
+  dropChanse: 20
+  drop: {fileID: 5254037844254306037}
   projectile: {fileID: 8892171726122433266, guid: c52205d927de2fe4982a62f4f9e99a9b, type: 3}
+--- !u!114 &5254037844254306037 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8471846344508259084, guid: 8205946c9cefcfc408974c6d000864e6, type: 3}
+  m_PrefabInstance: {fileID: 4794050156487535105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612920082417176567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f4161f189f0a343b752422a7755f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,6 +6,8 @@ using UnityEngine;
 public class ScalingScript : MonoBehaviour
 {
     UnityEngine.Vector3 normalScale; 
+    int scale;
+    [SerializeField] GameObject[] scalesText;
     [SerializeField] List<float> scales = new List<float>();
     [SerializeField] float scaledTime = 30, normalTime = 60;
     float timer = 0;
@@ -28,6 +30,7 @@ public class ScalingScript : MonoBehaviour
                 timer = 0;
                 transform.localScale = normalScale;
                 isScaled = false;
+                Instantiate(scalesText[4]);
                 Debug.Log("Player scale set to 1");
             }
         }
@@ -38,11 +41,17 @@ public class ScalingScript : MonoBehaviour
             else
             {
                 timer = 0;
-                int scale = Random.Range(0,4);
+                scale = Random.Range(0,4);
                 transform.localScale = scales[scale]*normalScale;
                 isScaled = true;
+                Instantiate(scalesText[scale]);
                 Debug.Log("Player scale set to " + scales[scale]);
             }
         }
+    }
+
+    public float GetScale()
+    {
+        return isScaled? scales[scale] : 1;
     }
 }

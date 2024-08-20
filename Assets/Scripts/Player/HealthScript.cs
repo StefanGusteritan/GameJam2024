@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthScript : MonoBehaviour
 {
+    [SerializeField] ScalingScript scale;
     [SerializeField] float health, maxHealh;
     LevelLogicScript logicScript;
 
@@ -52,7 +53,7 @@ public class HealthScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if (other.gameObject.layer == 6)
-            takeDamage(10);
+            takeDamage(10 * (1 / scale.GetScale()));
 
         else if (other.gameObject.layer == 8)
             takeDamage(other.gameObject.GetComponent<ProjectileScript>().GetDamage());

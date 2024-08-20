@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+    [SerializeField] ScalingScript scale;
     [SerializeField] float speed = 2, raycastOffset = 0.04F;
     [SerializeField] Rigidbody2D body;
     [SerializeField] ContactFilter2D movementFilter;
@@ -40,7 +41,7 @@ public class MovementScript : MonoBehaviour
             castCollisions,
             speed * Time.deltaTime + raycastOffset
         );
-        movement.x = Convert.ToInt16(count == 0) * inputDirection.x * speed * Time.deltaTime;
+        movement.x = Convert.ToInt16(count == 0) * inputDirection.x * speed * (1 / scale.GetScale()) * Time.deltaTime;
 
         count = body.Cast
         (

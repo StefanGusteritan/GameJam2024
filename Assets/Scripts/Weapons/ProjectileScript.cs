@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
 {
+    ScalingScript playerScale;
     public float range, speed, damage;
     Vector3 startPosition;
 
     public virtual void Start() {
         startPosition = transform.position;
+
+        playerScale = GameObject.FindGameObjectWithTag("Player").GetComponent<ScalingScript>();
+        damage *= (gameObject.layer == 7)? playerScale.GetScale() : (1/playerScale.GetScale());
     }
 
     // Update is called once per frame

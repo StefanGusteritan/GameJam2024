@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class EnemyHealthScript : MonoBehaviour
 {
-    [SerializeField] float health, maxHealh;
+    [SerializeField] float health, maxHealh, dropChanse;
+    [SerializeField] DropScript drop;
+    float chanse;
 
     private void Start() {
         health = maxHealh;
@@ -28,6 +30,10 @@ public class EnemyHealthScript : MonoBehaviour
     //Deletes the object when it has no more health
     public virtual void Die()
     {
+        chanse = Random.Range(1, 101);
+        if (chanse <= dropChanse)
+            drop.Drop();
+
         GameObject.Destroy(gameObject);
         Debug.Log(gameObject.name + " deleted");
     }

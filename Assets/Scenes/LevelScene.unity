@@ -1458,6 +1458,13 @@ MonoBehaviour:
   winMenu: {fileID: 1520262013}
   weaponMenu: {fileID: 686718432}
   hud: {fileID: 47101699}
+  tutorialText: {fileID: 6603491787121658446, guid: b659c428c15b8fe40b6f7679c2cd1b65, type: 3}
+  wavesText:
+  - {fileID: 0}
+  - {fileID: 7113131016148274532, guid: a590bf73fa8640348ac6eaf7f268f515, type: 3}
+  - {fileID: 759082696604056470, guid: e7da22ca2b25e4348a4a92b7cef40b76, type: 3}
+  - {fileID: 27659138906454981, guid: e571a66c92f984845883ebe845f07e72, type: 3}
+  - {fileID: 2651723655945025590, guid: 80e64aa1765c5c04a9cd826196fb1a8d, type: 3}
   waveDurations:
   - 0
   - 180
@@ -1895,7 +1902,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.05660379, g: 0.030660387, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.6132076, g: 0.45926863, b: 0.25743148, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2787,7 +2794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1469861520105659335, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1469861520105659335, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_TagString
@@ -5057,6 +5064,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8004179163021334937, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
   m_PrefabInstance: {fileID: 6190109474576447307}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1401736750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+  m_PrefabInstance: {fileID: 6190109474576447307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2ea00335eded945a337322850747b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1446628548
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,6 +7925,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 544458064919724725, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scale
+      value: 
+      objectReference: {fileID: 1401736750}
     - target: {fileID: 2387536476842100921, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7947,6 +7969,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scales.Array.data[2]
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scales.Array.data[3]
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scalesText.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scalesText.Array.data[0]
+      value: 
+      objectReference: {fileID: 2507848429257418041, guid: 032f47f2291cada44afd702fa7d998ca, type: 3}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scalesText.Array.data[1]
+      value: 
+      objectReference: {fileID: 4741917143331931386, guid: 81782554a4fb0434dac47b9b19087512, type: 3}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scalesText.Array.data[2]
+      value: 
+      objectReference: {fileID: 4290685668799200198, guid: 8708a359dff1c084b8b1df98cb408804, type: 3}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scalesText.Array.data[3]
+      value: 
+      objectReference: {fileID: 693966340590919795, guid: 1ac0fb35a6246654eac5c4d1c21172c7, type: 3}
+    - target: {fileID: 2835248359674352807, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scalesText.Array.data[4]
+      value: 
+      objectReference: {fileID: 3115108106556075869, guid: 4b55d42586588054d9abf32e2218b062, type: 3}
+    - target: {fileID: 3810234293463324787, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
+      propertyPath: scale
+      value: 
+      objectReference: {fileID: 1401736750}
     - target: {fileID: 4407275140817868858, guid: 0841e522f42dcda44bab0d39d5c87881, type: 3}
       propertyPath: m_Name
       value: Player

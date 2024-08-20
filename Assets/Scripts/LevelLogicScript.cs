@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelLogicScript : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu, gameOverMenu, winMenu, weaponMenu, hud;
+    [SerializeField] GameObject pauseMenu, gameOverMenu, winMenu, weaponMenu, hud,
+        tutorialText;
+    [SerializeField] GameObject[] wavesText;
     bool paused = false;
 
     int wave = 0;
@@ -18,6 +20,7 @@ public class LevelLogicScript : MonoBehaviour
     [SerializeField] EnemySpawnerScript spawner;
 
     private void Start() {
+        Instantiate(tutorialText);
         StartWave();
     }
 
@@ -86,6 +89,7 @@ public class LevelLogicScript : MonoBehaviour
         waveActive = true;
         waveTimer = 0;
         spawner.SetWave(wave);
+        Instantiate(wavesText[wave]);
         Debug.Log("Wave " + wave + " started");
     }
 
