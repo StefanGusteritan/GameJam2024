@@ -1586,11 +1586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -2958,11 +2958,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -4597,11 +4597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -5788,8 +5788,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 1
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -8341,11 +8341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ScreenMatchMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_MatchWidthOrHeight
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3236447071723098323, guid: 2346e02624892994697d6a08aab20ce5, type: 3}
       propertyPath: m_ReferenceResolution.x
