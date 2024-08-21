@@ -13,6 +13,14 @@ PrefabInstance:
       value: GoldenHealthBoost
       objectReference: {fileID: 0}
     - target: {fileID: 2753936331146062565, guid: 312cf66cca6875642bb56929e9494746, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753936331146062565, guid: 312cf66cca6875642bb56929e9494746, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753936331146062565, guid: 312cf66cca6875642bb56929e9494746, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -22,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753936331146062565, guid: 312cf66cca6875642bb56929e9494746, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2753936331146062565, guid: 312cf66cca6875642bb56929e9494746, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,13 +60,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2890080590514864026, guid: 312cf66cca6875642bb56929e9494746, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890080590514864026, guid: 312cf66cca6875642bb56929e9494746, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3556840249835540414, guid: 312cf66cca6875642bb56929e9494746, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5631439914477412587, guid: 8b987fdfae505634dbb92dbdc7707035, type: 3}
     - target: {fileID: 3556840249835540414, guid: 312cf66cca6875642bb56929e9494746, type: 3}
       propertyPath: m_Color.b
-      value: 0.0047169924
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3556840249835540414, guid: 312cf66cca6875642bb56929e9494746, type: 3}
       propertyPath: m_Color.g
-      value: 0.8583757
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3556840249835540414, guid: 312cf66cca6875642bb56929e9494746, type: 3}
       propertyPath: m_Color.r

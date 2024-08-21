@@ -9,16 +9,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1456921030708755909, guid: f096b670bee169e4ca342cca9909846b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7304926467885815487, guid: 733df2485a1b8e841949a72216f01fe6, type: 3}
+    - target: {fileID: 1456921030708755909, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_Color.b
-      value: 0.124445744
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1456921030708755909, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_Color.g
-      value: 0.33962262
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1456921030708755909, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_Color.r
-      value: 0.0240299
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26,11 +38,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1595406300497574949, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68,6 +80,10 @@ PrefabInstance:
       propertyPath: maxAmo
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7562415281220262499, guid: f096b670bee169e4ca342cca9909846b, type: 3}
+      propertyPath: hudSprite
+      value: 
+      objectReference: {fileID: -8990471697132558462, guid: 7ba51298415d07843bafe6086c455a1e, type: 3}
     - target: {fileID: 7562415281220262499, guid: f096b670bee169e4ca342cca9909846b, type: 3}
       propertyPath: shootTime
       value: 0.35

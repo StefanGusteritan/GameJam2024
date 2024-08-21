@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+    [SerializeField] Animator animator;
+    float angle;
+    [SerializeField] Sprite[] bodySprites;
+    [SerializeField] SpriteRenderer bodySpriteRenderer;
     [SerializeField] ScalingScript scale;
     [SerializeField] float speed = 2, raycastOffset = 0.04F;
     [SerializeField] Rigidbody2D body;
@@ -20,6 +24,12 @@ public class MovementScript : MonoBehaviour
         inputDirection.x = Input.GetAxisRaw("Horizontal");
         inputDirection.y = Input.GetAxisRaw("Vertical");
         inputDirection.Normalize();
+        animator.SetBool("Walking", inputDirection != Vector2.zero);
+        if (inputDirection != Vector2.zero)
+        {
+            angle = VectorLogic.Angle(inputDirection);
+            bodySpriteRenderer.sprite = (angle > -90 && angle < 90)? bodySprites[0] : bodySprites[1];
+        }
     }
 
     private void FixedUpdate()
